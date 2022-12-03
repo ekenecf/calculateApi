@@ -18,7 +18,6 @@ export const createCalculation = async (req, res, next) => {
         operator: req.body.operator,
         sumAnswer: answer,
       });
-    console.log(req.body);
     res.status(201).json({
       message: "Successfully created",
     });
@@ -30,8 +29,6 @@ export const createCalculation = async (req, res, next) => {
 export const getAllCalculations = async (req, res, next) => {
   try {
     const calculate = await Calculate.find();
-
-    console.log(calculate);
     res.status(200).json({
       message: "Successful",
       data: {
