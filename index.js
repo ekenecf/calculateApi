@@ -31,6 +31,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(9000, () => {
-  console.log("connected to port 9000...!!");
+app.listen(process.env.PORT, () => {
+  console.log("connected ");
 });
