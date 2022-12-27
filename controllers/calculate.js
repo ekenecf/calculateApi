@@ -10,7 +10,6 @@ export const createCalculation = async (req, res, next) => {
     } else if ((req.body.operator === "-")) {
       answer = req.body.num1 - req.body.num2;
     } else {
-
       answer = (+req.body.num1) + (+req.body.num2);
     }
     await Calculate.create({

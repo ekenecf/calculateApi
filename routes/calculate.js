@@ -6,6 +6,6 @@ import {
 
 const router = express.Router();
 
-router.route("/").get(getAllCalculations).post(createCalculation);
+router.route("/calculate").get(getAllCalculations).post(createCalculation);
 
 export default router;

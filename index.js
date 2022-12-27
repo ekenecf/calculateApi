@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cors())
 
 
-app.use("/calculate", calculateRoute);
+app.use("/", calculateRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
