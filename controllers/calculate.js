@@ -9,8 +9,10 @@ export const createCalculation = async (req, res, next) => {
       answer = req.body.num1 * req.body.num2;
     } else if ((req.body.operator === "-")) {
       answer = req.body.num1 - req.body.num2;
-    } else {
+    } else if ((req.body.operator === "+")) {
       answer = (+req.body.num1) + (+req.body.num2);
+    } else {
+      answer = "Invalid"
     }
     await Calculate.create({
         num1: req.body.num1,
